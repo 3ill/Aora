@@ -121,7 +121,9 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
+    textAlign: 'center',
     gap: 2,
+    flex: 1,
   },
   iconImageStyle: {
     width: 20,
@@ -129,10 +131,10 @@ const styles = StyleSheet.create({
   },
 
   focusedFontStyle: {
-    fontFamily: 'Poppins-SemiBold',
+    fontFamily: 'GeistMono-SemiBold',
   },
   regularFontSize: {
-    fontFamily: 'Poppins-Regular',
+    fontFamily: 'GeistMono-SemiBold',
   },
 
   iconTextStyle: {
