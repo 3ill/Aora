@@ -27,6 +27,12 @@ export default function RootLayout() {
     'Poppins-Regular': require('../assets/fonts/Poppins-Regular.ttf'),
     'Poppins-SemiBold': require('../assets/fonts/Poppins-SemiBold.ttf'),
     'Poppins-Thin': require('../assets/fonts/Poppins-Thin.ttf'),
+    'GeistMono-Regular': require('../assets/fonts/GeistMono-Regular.otf'),
+    'GeistMono-Bold': require('../assets/fonts/GeistMono-Bold.otf'),
+    'GeistMono-Medium': require('../assets/fonts/GeistMono-Medium.otf'),
+    'GeistMono-Light': require('../assets/fonts/GeistMono-Light.otf'),
+    'GeistMono-Black': require('../assets/fonts/GeistMono-Black.otf'),
+    'GeistMono-SemiBold': require('../assets/fonts/GeistMono-SemiBold.otf'),
   });
 
   useEffect(() => {

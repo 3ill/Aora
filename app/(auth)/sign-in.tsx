@@ -70,14 +70,18 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.primary,
     height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
   },
 
   internalContainer: {
     width: '100%',
+    minHeight: '80%',
     justifyContent: 'center',
-    height: '100%',
     paddingHorizontal: 8,
     marginVertical: 24,
+    flex: 1,
   },
 
   imageStyle: {
@@ -86,13 +90,13 @@ const styles = StyleSheet.create({
   },
 
   welcomeText: {
-    fontSize: 24,
+    fontSize: 28,
     lineHeight: 32,
     color: 'white',
     shadowColor: 'white',
     fontFamily: 'Poppins-SemiBold',
     fontWeight: '700',
-    paddingTop: 16,
+    paddingTop: 34,
   },
 
   otherFormStyles: {
@@ -105,7 +109,7 @@ const styles = StyleSheet.create({
 
   exitContainer: {
     justifyContent: 'center',
-    paddingTop: 8,
+    paddingTop: 16,
     flexDirection: 'row',
     gap: 2,
   },

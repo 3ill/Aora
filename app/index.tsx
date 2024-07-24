@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     color: 'white',
-    fontFamily: 'Poppins-ExtraBold',
+    fontFamily: 'Poppins-SemiBold',
     letterSpacing: 1,
   },
 
