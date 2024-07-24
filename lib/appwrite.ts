@@ -5,6 +5,7 @@ import {
   Databases,
   ID,
   Models,
+  Query,
 } from 'react-native-appwrite'
 
 export const appWriteConfig = {
@@ -116,6 +117,28 @@ async function addUserToDB(
     })
 
     return newUser
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export async function getCurrentUser() {
+  const db = initDB(initAppWriteClient())
+  try {
+    const account = initAccount(initAppWriteClient())
+    const currentAccount = await account.get()
+
+    if (!currentAccount) throw new Error('could not fetch current account')
+
+    const currentUser = await db.listDocuments(
+      appWriteConfig.databaseId,
+      appWriteConfig.userCollectionId,
+      [Query.equal('accountId', currentAccount.$id)],
+    )
+
+    if (!currentUser) throw new Error('could not fetch current user')
+
+    return currentUser.documents[0]
   } catch (error) {
     console.error(error)
   }
