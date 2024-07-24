@@ -75,6 +75,7 @@ const styles = StyleSheet.create({
     color: Colors.gray[100],
     paddingTop: 14,
     paddingBottom: 8,
+    fontFamily: 'GeistMono-Bold',
   },
 
   inputContainer: {
