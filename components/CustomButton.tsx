@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 
   textStyle: {
     color: Colors.primary,
-    fontFamily: 'Poppins-SemiBold',
+    fontFamily: 'GeistMono-Black',
     fontSize: 18,
     lineHeight: 28,
   },
