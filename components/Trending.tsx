@@ -1,10 +1,24 @@
-import { View, Text } from 'react-native';
+import { View, Text, FlatList, StyleSheet } from 'react-native';
+
+interface Post {
+  $id: number;
+}
+interface TrendingProps {
+  posts: Post[];
+}
 import React from 'react';
 
-const Trending = () => {
+const Trending = ({ posts }: TrendingProps) => {
   return (
     <View>
-      <Text>Trending</Text>
+      <FlatList
+        data={posts}
+        keyExtractor={(item) => item.$id.toString()}
+        renderItem={({ item }) => (
+          <Text style={{ fontSize: 24 }}>{item.$id}</Text>
+        )}
+        horizontal
+      />
     </View>
   );
 };
