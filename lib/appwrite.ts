@@ -18,6 +18,8 @@ export const appWriteConfig = {
   storageId: '66a0c69d00075347d347',
 }
 
+const { databaseId, videoCollectionId } = appWriteConfig
+
 interface User {
   email: string
   password: string
@@ -141,5 +143,17 @@ export async function getCurrentUser() {
     return currentUser.documents[0]
   } catch (error) {
     console.error(error)
+  }
+}
+
+export async function getAllPosts() {
+  const client = initAppWriteClient()
+  const db = initDB(client)
+  try {
+    const posts = await db.listDocuments(databaseId, videoCollectionId)
+    return posts.documents
+  } catch (error) {
+    console.error(error)
+    throw new Error('An error occurred while getting all posts')
   }
 }
